@@ -1,0 +1,176 @@
+body {
+    background-color: #7B478D;
+    margin: 0;
+ }
+  
+ .header {
+    padding: 8px 16px;
+    background-color: #599F82;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+ }
+ .header h1 {
+    color: white;
+    font-size: 2.5em;
+    margin: 0;
+ }
+  
+ .header .icons {
+    display: flex;
+    justify-content: inherit;
+    align-items: inherit;
+ }
+ .header .icons img {
+    width: 1.75em;
+    height: 1.75em;
+    cursor: pointer;
+ }
+ .header .icons div {
+    width: 0.4em;
+    height: 0.4em;
+    border-radius: 50%;
+    margin: 0 1em;
+    background-color: black;
+ }
+ .header .user button {
+    background-color: blueviolet;
+    border: 0;
+    padding: .25em 1em;
+    font-size: 1.5em;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+ }
+  
+ .title {
+    width: 100%;
+    padding: 0 10%;
+ }
+ .title h1 {
+    font-size: 2.75em;
+    color: sandybrown;
+    margin: 0;
+ }
+ .title div {
+    height: 5px;
+    width: 30em;
+    margin: .5em 0 2em 0;
+    background-color: black;
+ }
+  
+ .container1 {
+    padding: 3em 10%;
+    display: flex;
+    justify-content: space-between;
+ }
+ .container1 .cropImg {
+    min-width: 450px;
+    min-height: 250px;
+    max-height: 300px;
+    overflow: hidden;
+ }
+ .container1 img {
+    width: 1920px;
+    height: 1080px;
+    margin: -420px 0 0 -720px;
+ }
+ .container1 p {
+    margin-top: 3em;
+    padding: 0 0 0 5em;
+    font-size: 1.15em;
+    text-align: justify;
+ }
+  
+ .container2, .container3 {
+    width: 100%;
+    height: 250px;
+    margin-bottom: 4em;
+ }
+  
+ .card {
+    background-color: #599F82;
+    width: 80%;
+    height: 100%;
+    margin: auto;
+    border-radius: 10px;
+    overflow: hidden;
+ }
+  
+ .cardHeader {
+    width: 20%;
+    height: 100%;
+    background-color: grey;
+    float: left;
+ }
+  
+ .card .cardContent {
+    float: left;
+    padding: 2em 1.5em;
+ }
+ .card .cardContent p{
+    color: white;
+    font-size: 1.5em;
+ }
+ .card .cardContent span{
+    color: white;
+    font-size: 1em;
+ }
+ .card .cardContent select {
+    background-color: blueviolet;
+    border: 0;
+    padding: .25em 1em;
+    font-size: 1.5em;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+ }
+ .card .cardContent select option{
+    background-color: rgb(75, 7, 66);
+ }
+ .card .cardContent .addButton {
+    background-color: blueviolet;
+    border: 0;
+    font-size: 1.5em;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: .05em .25em;
+ }
+  
+ .cardContent.content1 {
+  
+ }
+  
+ .cardContent.content2 {
+  
+ }
+  
+ .container4 {
+    width: 100%;
+    margin-bottom: 5em;
+ }
+ .container4 >div{
+    width: 20%;
+    height: 600px;
+    background-color: #599F82;
+    padding: 0 5%;
+    border-radius: 20px;
+    margin: auto;
+    display: flex;
+    flex-wrap: column;
+    flex-wrap: wrap;
+ }
+ .container4 >div input{
+    width: 100%;
+    margin-bottom: 2em;
+    max-height: 50px;
+ }
+ .container4 >div input:first-child{
+    margin-top: 4em;
+ }
+ .container4 >div button{
+    width: 60%;
+    max-height: 50px;
+ }
+ 
