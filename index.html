@@ -5,27 +5,44 @@
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <link rel="stylesheet" href="style.css">
    <title>Document</title>
+   <script>
+    function openDropdown(){
+        var btn = document.getElementById("buyIcon");
+        var btnPos = btn.getBoundingClientRect();
+        var dd = document.getElementById("hDropdown");
+        var header = document.getElementById("header").getBoundingClientRect();
+        if (dd.classList.contains("hidden")){
+            dd.classList.remove("hidden");
+            dd.style.top = header.bottom;
+            dd.style.left = 'calc(' + btnPos.left + 'px - ' + (dd.offsetWidth/2) + 'px + 0.875em)'; 
+        }
+        else dd.classList.add("hidden");
+    }
+
+   </script>
 </head>
 <body>
-   <div class="header">
-       <!-- <img src="assets/icon.png"> -->
+   <div id="header">
        <h1>SpaCIn Plants</h1>
        <div class="icons">
-           <img src="assets/buy.png">
+           <button id="buyIcon" onclick="openDropdown()"></button>
            <div></div>
            <img src="assets/graph.png">
            <div></div>
            <img src="assets/question.png">
+           <div class="vertLine"></div>
+           <button class="user">Log In</button>
        </div>
-       <div class="user">
-           <button>Log In</button>
-       </div>
+   </div>
+   <div id="hDropdown" class="hidden">
+    <button>opção 1</button>
+    <button>opção 2</button>
    </div>
    <div class="container1">
        <div class="cropImg">
            <img src="assets/imagemBonita.png">
        </div>
-       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam in pharetra odio. Vestibulum tempor, metus sed iaculis lobortis, neque augue aliquam purus, id sagittis ante nunc feugiat mauris. Vestibulum ipsum nisi, accumsan eget turpis sed, imperdiet fringilla lorem. Nam ac aliquam massa. Donec sed eleifend turpis. Integer egestas mattis tellus, vel finibus nisi laoreet eu. Nam aliquet lectus maximus, condimentum orci ac, tincidunt diam. Curabitur consectetur, ante at semper posuere, ligula lorem porta mauris, vitae ornare elit erat non velit. Suspendisse cursus augue at ex tempor, in pharetra tortor aliquam. Vestibulum in diam laoreet, suscipit dolor non, fringilla nunc. Donec a mattis leo. Cras cursus purus non bibendum placerat. Aenean ut placerat quam. Donec mollis pharetra dui ac bibendum. Vestibulum quam elit, condimentum quis ultricies eu, bibendum sit amet massa. Duis sed augue in mauris scelerisque elementum at at leo</p>
+       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam in pharetra odio. Vestibulum tempor, metus sed iaculis lobortis, neque augue aliquam purus, id sagittis ante nunc feugiat mauris. Vestibulum ipsum nisi, accumsan eget turpis sed, imperdiet fringilla lorem. Nam ac aliquam massa. Donec sed eleifend turpis. Integer egestas mattis tellus, vel finibus nisi laoreet eu. Nam aliquet lectus maximus, condimentum orci ac, tincidunt diam.</p>
    </div>
    <div class="title">
        <h1>Compre seu terreno</h1>
@@ -34,7 +51,7 @@
    <div class="container2">
        <div class="card">
            <div class="cardHeader">
- 
+            <img src="assets/island.gif">
            </div>
            <div class="cardContent content1">
                <select name="sizes">
@@ -52,7 +69,7 @@
    <div class="container3">
        <div class="card">
            <div class="cardHeader">
- 
+            <img style="width: 100%; margin-top: -12%;" src="assets/farm.png">
            </div>
            <div class="cardContent content2">
                <select name="seeds">
@@ -74,8 +91,11 @@
    </div>
    <div class="container4">
        <div>
+           <label>Nome Completo</label>
            <input placeholder="Nome">
+           <label>Insira um E-mail</label>
            <input placeholder="E-mail">
+           <label>Insira uma senha</label>
            <input placeholder="Senha">
            <div style="width: 40%;"></div>
            <button>Enviar</button>
