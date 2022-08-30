@@ -10,14 +10,25 @@
         var btn = document.getElementById("buyIcon");
         var btnPos = btn.getBoundingClientRect();
         var dd = document.getElementById("hDropdown");
-        var header = document.getElementById("header").getBoundingClientRect();
+        var header = document.getElementById("header");
         if (dd.classList.contains("hidden")){
             dd.classList.remove("hidden");
-            dd.style.top = header.bottom;
+            dd.style.top = (header.offsetHeight) + 'px';
             dd.style.left = 'calc(' + btnPos.left + 'px - ' + (dd.offsetWidth/2) + 'px + 0.875em)'; 
         }
         else dd.classList.add("hidden");
     }
+
+    window.onscroll = function (e) {  
+        var offset = document.documentElement.scrollTop;
+        var header = document.getElementById('header');
+        if(offset > 0 && !header.classList.contains('solid')){
+            header.classList.add('solid');
+        }
+        else if(offset == 0 && header.classList.contains('solid')){
+            header.classList.remove('solid');
+        }
+    } 
 
    </script>
 </head>
@@ -33,10 +44,11 @@
            <div class="vertLine"></div>
            <button class="user">Log In</button>
        </div>
-   </div>
-   <div id="hDropdown" class="hidden">
-    <button>opção 1</button>
-    <button>opção 2</button>
+       <div id="hDropdown" class="hidden">
+           <div class="btnFill"></div>
+           <button>opção 1</button>
+           <button>opção 2</button>
+       </div>
    </div>
    <div class="container1">
        <div class="cropImg">
@@ -69,7 +81,7 @@
    <div class="container3">
        <div class="card">
            <div class="cardHeader">
-            <img style="width: 100%; margin-top: -12%;" src="assets/farm.png">
+            <img src="assets/farm.png">
            </div>
            <div class="cardContent content2">
                <select name="seeds">
