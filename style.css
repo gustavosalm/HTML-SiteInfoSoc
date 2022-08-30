@@ -1,6 +1,7 @@
 body {
     background-color: #fff;
     background-image: url("./assets/homeBg.png");
+    background-size: cover;
     margin: 0;
     padding-top: 5em;
  }
